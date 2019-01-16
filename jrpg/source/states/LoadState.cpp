@@ -40,3 +40,11 @@ void LoadState::update(const double dt)
 void LoadState::render()
 {
 }
+
+/*
+	https://opengameart.org/content/rpg-tiles-0
+	https://opengameart.org/content/oga-16x16-jrpg-sprites-tiles
+	https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181
+	https://opengameart.org/content/trees-bushes
+	https://opengameart.org/content/rpg-town-pixel-art-assets
+*/
