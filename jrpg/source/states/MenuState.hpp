@@ -8,6 +8,7 @@
 #define JRPG_MENUSTATE_HPP_
 
 #include <sl/ui/UI.hpp>
+#include <sl/mapping/TiledMap.hpp>
 #include <sl/core/StateMachine.hpp>
 
 class MenuState : public sl::State
@@ -24,10 +25,10 @@ public:
 	void render() override;
 
 private:
-	sl::UI m_menu;
-	sl::UITheme m_menuTheme;
-	sl::Panel* m_menuPanel;
-	std::vector<
+	//sl::UI m_menu;
+	//sl::UITheme m_menuTheme;
+	//sl::Panel* m_menuPanel;
+	sl::TiledMap m_map;
 };
 
 #endif

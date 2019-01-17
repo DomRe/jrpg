@@ -26,7 +26,7 @@ Game::Game(const std::string& config, std::function<void(std::ofstream&)> newCon
 	m_stateMachine->push("load");
 
 	entt::DefaultRegistry::entity_type cameraEntity = m_world->m_registry.create();
-	m_world->m_registry.assign<sl::CameraTag>(entt::tag_t{}, cameraEntity, sl::Rect<float, int>{ 0, 0, 1280, 720 }); //896, 576
+	m_world->m_registry.assign<sl::CameraTag>(entt::tag_t{}, cameraEntity, sl::Rect<float, int>{ 0, 0, 640, 480 }); // 1280, 720
 
 	sl::Keys::UI_CONFIRM = ALLEGRO_KEY_ENTER;
 }
