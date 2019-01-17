@@ -17,7 +17,10 @@ MenuState::MenuState()
 	m_bounds.m_width = 1280;
 	m_bounds.m_height = 720;
 
-	//m_menu.createFromScript("menuUI.lua");
+	sl::WidgetStorage ws;
+	sl::ThemeStorage ts;
+
+	m_menu.createFromScript("menuUI.lua", &ws, &ts);
 	m_map.load("maps/demo.tmx");
 }
 

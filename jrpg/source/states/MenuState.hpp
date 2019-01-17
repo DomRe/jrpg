@@ -25,9 +25,7 @@ public:
 	void render() override;
 
 private:
-	//sl::UI m_menu;
-	//sl::UITheme m_menuTheme;
-	//sl::Panel* m_menuPanel;
+	sl::UI m_menu;
 	sl::TiledMap m_map;
 };
 
