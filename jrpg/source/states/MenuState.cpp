@@ -17,10 +17,7 @@ MenuState::MenuState()
 	m_bounds.m_width = 1280;
 	m_bounds.m_height = 720;
 
-	sl::WidgetStorage ws;
-	sl::ThemeStorage ts;
-
-	m_menu.createFromScript("menuUI.lua", &ws, &ts);
+	m_menu.createFromScript("menuUI.lua", &m_widgetStorage, &m_themeStorage);
 	m_map.load("maps/demo.tmx");
 }
 
@@ -42,9 +39,11 @@ void MenuState::event(ALLEGRO_EVENT* event)
 
 void MenuState::update(const double dt)
 {
+	m_menu.update(dt);
 }
 
 void MenuState::render()
 {
 	sl::Locator::world->getSystem<sl::RenderSystem>()->render();
+	m_menu.render();
 }

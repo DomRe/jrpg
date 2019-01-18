@@ -27,6 +27,8 @@ public:
 private:
 	sl::UI m_menu;
 	sl::TiledMap m_map;
+	sl::ThemeStorage m_themeStorage;
+	sl::WidgetStorage m_widgetStorage;
 };
 
 #endif
