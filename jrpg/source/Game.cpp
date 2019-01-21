@@ -11,6 +11,7 @@
 
 #include "states/LoadState.hpp"
 #include "states/MenuState.hpp"
+#include "states/GameState.hpp"
 
 #include "Game.hpp"
 
@@ -22,7 +23,7 @@ Game::Game(const std::string& config, std::function<void(std::ofstream&)> newCon
 
 	m_stateMachine->createState<LoadState>("load");
 	m_stateMachine->createState<MenuState>("menu");
-	m_stateMachine->push("menu");
+	m_stateMachine->createState<GameState>("game");
 	m_stateMachine->push("load");
 
 	entt::DefaultRegistry::entity_type cameraEntity = m_world->m_registry.create();

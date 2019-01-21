@@ -5,10 +5,12 @@
     <ClCompile Include="source\Game.cpp" />
     <ClCompile Include="source\states\LoadState.cpp" />
     <ClCompile Include="source\states\MenuState.cpp" />
+    <ClCompile Include="source\states\GameState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Game.hpp" />
     <ClInclude Include="source\states\LoadState.hpp" />
     <ClInclude Include="source\states\MenuState.hpp" />
+    <ClInclude Include="source\states\GameState.hpp" />
   </ItemGroup>
 </Project>

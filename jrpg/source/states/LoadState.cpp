@@ -9,11 +9,8 @@
 #include "LoadState.hpp"
 
 LoadState::LoadState()
+	:State({ 0, 0, 1280, 720 })
 {
-	m_bounds.m_x = 0;
-	m_bounds.m_y = 0;
-	m_bounds.m_width = 1280;
-	m_bounds.m_height = 720;
 }
 
 LoadState::~LoadState()
@@ -34,7 +31,7 @@ void LoadState::event(ALLEGRO_EVENT* event)
 
 void LoadState::update(const double dt)
 {
-	sl::Locator::stateMachine->pop();
+	sl::Locator::stateMachine->push("menu");
 }
 
 void LoadState::render()

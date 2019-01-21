@@ -1,20 +1,20 @@
 ///
-/// MenuState.hpp
+/// GameState.hpp
 /// jrpg
 /// See License.txt
 ///
 
-#ifndef JRPG_MENUSTATE_HPP_
-#define JRPG_MENUSTATE_HPP_
+#ifndef JRPG_GAMESTATE_HPP_
+#define JRPG_GAMESTATE_HPP_
 
-#include <sl/ui/UI.hpp>
+#include <sl/mapping/TiledMap.hpp>
 #include <sl/core/StateMachine.hpp>
 
-class MenuState : public sl::State
+class GameState : public sl::State
 {
 public:
-	MenuState();
-	~MenuState() override;
+	GameState();
+	~GameState() override;
 
 	void load() override;
 	void unload() override;
@@ -24,9 +24,7 @@ public:
 	void render() override;
 
 private:
-	sl::UI m_menu;
-	sl::ThemeStorage m_themeStorage;
-	sl::WidgetStorage m_widgetStorage;
+	sl::TiledMap m_map;
 };
 
 #endif
